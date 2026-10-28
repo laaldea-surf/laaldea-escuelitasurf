@@ -1,423 +1,476 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LA ALDEA SURF | Temporada 2027</title>
-  <!-- Eleganta kaj moderna tipografio: Syne + Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg-dark: #0b1120;
-      --bg-card: #162032;
-      --accent-blue: #38bdf8;
-      --accent-green: #25d366;
-      --accent-green-hover: #1eae53;
-      --text-main: #ffffff;
-      --text-muted: #94a3b8;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      background-color: var(--bg-dark);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    /* Nova tipografio por titoloj */
-    h1, h2, h3, .brand-title {
-      font-family: 'Syne', sans-serif;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* Header Nav - Alĝustigita kaj pli malgranda */
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 100;
-      background: rgba(11, 17, 32, 0.9);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-container {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .logo-text {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #fff;
-      text-decoration: none;
-      line-height: 1.1;
-      letter-spacing: 0.5px;
-    }
-
-    .location-subtext {
-      font-size: 0.65rem;
-      color: var(--accent-blue);
-      font-weight: 600;
-      letter-spacing: 1px;
-      margin-top: 2px;
-      text-transform: uppercase;
-    }
-
-    .header-wa-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background-color: var(--accent-green);
-      color: #fff;
-      padding: 0.5rem 0.9rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 0.75rem;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      transition: background-color 0.2s;
-    }
-
-    .header-wa-btn:hover {
-      background-color: var(--accent-green-hover);
-    }
-
-    /* Hero Section */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 6rem 1.5rem 3rem 1.5rem;
-      /* Foto provizita de la uzanto */
-      background: linear-gradient(180deg, rgba(11,17,32,0.4) 0%, rgba(11,17,32,0.92) 100%), 
-                  url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-    }
-
-    .location-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.4rem;
-      background: rgba(22, 32, 50, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      color: #e2e8f0;
-      margin-bottom: 1.5rem;
-      letter-spacing: 1px;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.2rem, 6vw, 4.2rem);
-      font-weight: 800;
-      margin-bottom: 0.3rem;
-      line-height: 1.1;
-      text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
-    }
-
-    .hero .subtitle {
-      font-size: clamp(1rem, 2.5vw, 1.4rem);
-      letter-spacing: 4px;
-      color: var(--accent-blue);
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    /* Inkluzivita Ekipejo */
-    .included-card {
-      background: rgba(22, 32, 50, 0.85);
-      border: 1px solid rgba(56, 189, 248, 0.3);
-      backdrop-filter: blur(10px);
-      border-radius: 18px;
-      padding: 1.5rem;
-      max-width: 480px;
-      width: 100%;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    .included-header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.6rem;
-      color: #38bdf8;
-      font-weight: 700;
-      font-size: 1.05rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .included-card p {
-      color: var(--text-muted);
-      font-size: 0.9rem;
-    }
-
-    /* Ĉefa Butono */
-    .cta-button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 0.75rem;
-      background-color: var(--accent-green);
-      color: #fff;
-      padding: 1.1rem 2.2rem;
-      border-radius: 50px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.05rem;
-      width: 100%;
-      max-width: 480px;
-      transition: transform 0.2s, background-color 0.2s;
-      box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      background-color: var(--accent-green-hover);
-    }
-
-    /* Sekcio de Vetero kaj Tajdoj */
-    .weather-section {
-      padding: 4rem 1.5rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 1.6rem;
-      margin-bottom: 0.5rem;
-      color: #fff;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .weather-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.25rem;
-    }
-
-    .weather-card {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 1.5rem;
-      text-align: center;
-    }
-
-    .weather-card .val {
-      font-size: 2rem;
-      font-weight: 800;
-      color: #38bdf8;
-      margin: 0.3rem 0;
-      font-family: 'Syne', sans-serif;
-    }
-
-    .weather-card .lbl {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    /* Tabela de mareas */
-    .tides-container {
-      background: var(--bg-card);
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      border-radius: 16px;
-      padding: 1.5rem;
-      margin-top: 1.5rem;
-    }
-
-    .tides-title {
-      font-size: 1rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
-
-    .tide-row {
-      display: flex;
-      justify-content: space-between;
-      padding: 0.75rem 0;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-      font-size: 0.9rem;
-    }
-
-    .tide-row:last-child {
-      border-bottom: none;
-    }
-
-    /* Flosanta Butono */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      background-color: var(--accent-green);
-      color: white;
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-      z-index: 999;
-      transition: transform 0.2s;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.08);
-    }
-
-    footer {
-      text-align: center;
-      padding: 2.5rem 1.5rem;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      color: var(--text-muted);
-      font-size: 0.8rem;
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Supra Barra -->
-  <header>
-    <div class="brand-container">
-      <a href="#" class="logo-text">LA ALDEA SURF</a>
-      <span class="location-subtext">Mar de Ajó • La Costa</span>
-    </div>
-    <a href="https://wa.me/5492257525899" target="_blank" class="header-wa-btn">
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      Escribime
-    </a>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="location-tag">
-      📍 Mar de Ajó • Partido de La Costa
-    </div>
-
-    <h1>LA ALDEA SURF</h1>
-    <p class="subtitle">TEMPORADA 2027</p>
-
-    <!-- Remagilo pri la ekipejo -->
-    <div class="included-card">
-      <div class="included-header">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-        <span>Trajes y tablas 100% incluidos</span>
-      </div>
-      <p>Llegás a la playa y tenés todo tu equipamiento listo para entrar al agua sin ningún costo extra.</p>
-    </div>
-
-    <a href="https://wa.me/5492257525899" target="_blank" class="cta-button">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-      Escribime por WhatsApp
-    </a>
-  </section>
-
-  <!-- Sekcio de Clima kaj Tajdoj -->
-  <section class="weather-section">
-    <h2 class="section-title">CLIMA Y MAREAS EN VIVO</h2>
-    <p class="section-subtitle">Estado actual de la playa en Mar de Ajó, Partido de La Costa</p>
-
-    <div class="weather-grid">
-      <div class="weather-card">
-        <div class="lbl">Temperatura</div>
-        <div class="val" id="temp-val">22°C</div>
-        <div style="font-size: 0.75rem; color: var(--text-muted);">Mar de Ajó</div>
-      </div>
-      <div class="weather-card">
-        <div class="lbl">Viento</div>
-        <div class="val" id="wind-val">14 km/h</div>
-        <div style="font-size: 0.75rem; color: var(--text-muted);" id="wind-dir">Onshore</div>
-      </div>
-      <div class="weather-card">
-        <div class="lbl">Altura de Ola</div>
-        <div class="val" id="wave-val">1.2 m</div>
-        <div style="font-size: 0.75rem; color: var(--text-muted);">Ideal principiantes</div>
-      </div>
-    </div>
-
-    <!-- Tabela de Mareas -->
-    <div class="tides-container">
-      <div class="tides-title">
-        🌊 Mareas de Hoy - Mar de Ajó
-      </div>
-      <div class="tide-row">
-        <span>Pleamar (Marea Alta)</span>
-        <span style="font-weight: 700; color: #38bdf8;">06:45 hs - 1.6m</span>
-      </div>
-      <div class="tide-row">
-        <span>Bajamar (Marea Baja)</span>
-        <span style="font-weight: 700; color: #94a3b8;">13:20 hs - 0.4m</span>
-      </div>
-      <div class="tide-row">
-        <span>Pleamar (Marea Alta)</span>
-        <span style="font-weight: 700; color: #38bdf8;">19:10 hs - 1.5m</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- Flosanta Butono -->
-  <a href="https://wa.me/5492257525899" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
-    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
-  </a>
-
-  <footer>
-    <p>© LA ALDEA SURF 2027 • Mar de Ajó, Partido de La Costa</p>
-  </footer>
-
-  <!-- Reala veter-skripto -->
-  <script>
-    async function getBeachData() {
-      try {
-        const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-36.71&longitude=-56.67&current_weather=true');
-        const data = await res.json();
-        if(data.current_weather) {
-          document.getElementById('temp-val').textContent = Math.round(data.current_weather.temperature) + '°C';
-          document.getElementById('wind-val').textContent = Math.round(data.current_weather.windspeed) + ' km/h';
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LA ALDEA SURF | Escuela de Surf - Mar de Ajó</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Bebas Neue (títulos surferos potentes) & Inter (cuerpo ultra limpio) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Bebas Neue', 'sans-serif'],
+                    },
+                    colors: {
+                        ocean: {
+                            950: '#060a12',
+                            900: '#0a101f',
+                            800: '#121a2d',
+                            700: '#1b2640',
+                            500: '#0284c7',
+                            400: '#38bdf8',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                            600: '#059669',
+                        }
+                    }
+                }
+            }
         }
-      } catch(e) {}
-    }
-    getBeachData();
-  </script>
+    </script>
 
+    <style>
+        .font-display {
+            font-family: 'Bebas Neue', cursive, sans-serif;
+            letter-spacing: 0.05em;
+        }
+        .pulse-whatsapp {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0%, 100% { transform: scale(1); box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.06); box-shadow: 0 15px 35px rgba(16, 185, 129, 0.6); }
+        }
+    </style>
+</head>
+<body class="bg-ocean-950 text-slate-100 font-sans antialiased selection:bg-ocean-500 selection:text-white">
+
+    <!-- NAVBAR NAVEGACIÓN LIMPIA -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-ocean-950/85 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- MARCA EN TEXTO MINIMALISTA Y ESTILIZADO -->
+            <a href="#" class="flex flex-col">
+                <span class="font-display font-black text-3xl sm:text-4xl tracking-wider text-white leading-none uppercase">
+                    LA ALDEA SURF
+                </span>
+                <span class="text-[10px] font-extrabold tracking-[0.25em] text-ocean-400 uppercase mt-0.5">
+                    MAR DE AJÓ &bull; LA COSTA
+                </span>
+            </a>
+
+            <!-- NAV DESKTOP -->
+            <nav class="hidden md:flex items-center space-x-8 text-xs font-extrabold tracking-widest">
+                <a href="#inicio" class="text-slate-300 hover:text-white transition-colors">INICIO</a>
+                <a href="#clima" class="text-slate-300 hover:text-white transition-colors">CLIMA & MAREAS</a>
+                <a href="#incluido" class="text-slate-300 hover:text-white transition-colors">EQUIPAMIENTO</a>
+                <a href="#clases" class="text-slate-300 hover:text-white transition-colors">CLASES</a>
+            </nav>
+
+            <!-- CTA WHATSAPP TOP -->
+            <div>
+                <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20consultar%20por%20las%20clases%20en%20La%20Aldea%20Surf" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="inline-flex items-center space-x-2 bg-emerald-500 hover:bg-emerald-400 text-ocean-950 font-extrabold px-5 py-2.5 rounded-full text-xs tracking-wider uppercase transition-all shadow-lg hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>Escribime por WhatsApp</span>
+                </a>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- HERO SECTION PRINCIPAL CON FOTO DE IMPACTO -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center pt-24 pb-16 overflow-hidden">
+        
+        <!-- FONDO CON FOTO DE SURFER EN ACCIÓN Y CORTE DE OLA -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1502680390469-be75c86b636f?auto=format&fit=crop&w=1920&q=80" 
+                 alt="Surfer realizando maniobra en la ola" 
+                 class="w-full h-full object-cover object-center brightness-90 scale-100">
+            <!-- DEGRADADOS PROFUNDOS PARA VISIBILIDAD OPTIMA DE TEXTO -->
+            <div class="absolute inset-0 bg-gradient-to-t from-ocean-950 via-ocean-950/60 to-ocean-950/75"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center mt-6">
+            
+            <!-- UBICACIÓN BADGE -->
+            <div class="inline-flex items-center space-x-2 bg-ocean-900/80 border border-ocean-400/30 backdrop-blur-md px-4 py-1.5 rounded-full mb-6">
+                <i class="fa-solid fa-location-dot text-ocean-400 text-xs"></i>
+                <span class="text-xs sm:text-sm font-extrabold tracking-widest text-slate-200 uppercase">
+                    Mar de Ajó &bull; Partido de La Costa
+                </span>
+            </div>
+
+            <!-- TÍTULO CON NUEVA TIPOGRAFÍA BEBAS NEUE -->
+            <h1 class="font-display font-extrabold text-6xl sm:text-8xl md:text-9xl text-white tracking-wider uppercase leading-none drop-shadow-2xl mb-1">
+                LA ALDEA SURF
+            </h1>
+
+            <p class="font-display font-bold text-2xl sm:text-3xl md:text-4xl text-ocean-400 tracking-[0.25em] uppercase mb-8">
+                TEMPORADA 2027
+            </p>
+
+            <!-- DESTACADO: EQUIPAMIENTO 100% INCLUIDO -->
+            <div class="max-w-xl mx-auto bg-ocean-900/90 border border-ocean-500/40 backdrop-blur-md p-4 sm:p-5 rounded-2xl mb-10 shadow-2xl">
+                <div class="flex items-center justify-center space-x-3 text-emerald-400 font-extrabold text-sm sm:text-base">
+                    <i class="fa-solid fa-circle-check text-xl shrink-0"></i>
+                    <span>Trajes de neopreno y tablas 100% incluidos en cada clase</span>
+                </div>
+                <p class="text-slate-300 text-xs sm:text-sm mt-1.5 font-normal">
+                    Llegás a la playa y tenés todo listo para entrar al agua. Sin costos extras.
+                </p>
+            </div>
+
+            <!-- BOTONES PRINCIPALES -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20reservar%20mi%20clase%20de%20surf" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-emerald-500 hover:bg-emerald-400 text-ocean-950 font-extrabold text-base px-8 py-4 rounded-xl shadow-2xl transition-all duration-300 hover:scale-105">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i>
+                    <span class="uppercase tracking-wider">Escribime por WhatsApp</span>
+                </a>
+
+                <a href="#clima" 
+                   class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-ocean-800/80 hover:bg-ocean-700 text-white font-bold text-base px-6 py-4 rounded-xl border border-white/10 backdrop-blur-md transition-all">
+                    <i class="fa-solid fa-water text-ocean-400"></i>
+                    <span>Ver Clima y Mareas Hoy</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECCIÓN CLIMA, OLAS Y MAREAS EN VIVO EN MAR DE AJÓ -->
+    <section id="clima" class="py-20 bg-ocean-900 border-y border-white/10 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-400 font-display font-extrabold uppercase tracking-widest text-xs">
+                    Información Técnica en Tiempo Real
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase mt-2 mb-3">
+                    Clima & Estado del Mar
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Condiciones actuales en el pico de <strong>Mar de Ajó</strong> (Coordenadas: -36.71, -56.67).
+                </p>
+            </div>
+
+            <!-- WIDGET DE CLIMA Y MAR EN VIVO -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8">
+                
+                <!-- TEMPERATURA -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <i class="fa-solid fa-temperature-half"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Temperatura</span>
+                    <span id="live-temp" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">--°C</span>
+                    <span class="text-[11px] text-ocean-400 mt-1" id="temp-desc">Mar de Ajó</span>
+                </div>
+
+                <!-- VIENTO -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Viento</span>
+                    <span id="live-wind" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- km/h</span>
+                    <span class="text-[11px] text-emerald-400 mt-1" id="wind-dir">Cargando...</span>
+                </div>
+
+                <!-- ALTURA DE OLA -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Altura de Ola</span>
+                    <span id="live-wave" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- m</span>
+                    <span class="text-[11px] text-ocean-400 mt-1">Oleaje Costero</span>
+                </div>
+
+                <!-- PERIODO DE OLAS -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Período</span>
+                    <span id="live-period" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- seg</span>
+                    <span class="text-[11px] text-emerald-400 mt-1">Swell marítimo</span>
+                </div>
+
+            </div>
+
+            <!-- TABLA DE MAREAS ESTIMADAS DEL DÍA -->
+            <div class="bg-ocean-950/90 border border-white/10 rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center space-x-3 mb-4 border-b border-white/10 pb-4">
+                    <i class="fa-solid fa-compass-drafting text-ocean-400 text-xl"></i>
+                    <div>
+                        <h3 class="font-display font-extrabold text-white text-base">Tabla de Mareas Estimadas del Día</h3>
+                        <p class="text-xs text-slate-400">Referencia de mareas para la zona de Mar de Ajó</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Pleamar (Alta)</span>
+                        <span class="font-display font-bold text-lg text-white">04:15 hs</span>
+                        <span class="text-xs text-ocean-400 block">+1.45 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Bajamar (Baja)</span>
+                        <span class="font-display font-bold text-lg text-white">10:30 hs</span>
+                        <span class="text-xs text-emerald-400 block">+0.42 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Pleamar (Alta)</span>
+                        <span class="font-display font-bold text-lg text-white">16:45 hs</span>
+                        <span class="text-xs text-ocean-400 block">+1.52 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Bajamar (Baja)</span>
+                        <span class="font-display font-bold text-lg text-white">22:50 hs</span>
+                        <span class="text-xs text-emerald-400 block">+0.38 m</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- DESTACADO EQUIPAMIENTO INCLUIDO -->
+    <section id="incluido" class="py-20 bg-ocean-950 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-ocean-900 via-ocean-800 to-ocean-900 border border-ocean-500/30 rounded-3xl p-8 sm:p-12 shadow-2xl">
+                
+                <div class="text-center max-w-3xl mx-auto mb-10">
+                    <span class="bg-emerald-500 text-ocean-950 font-display font-extrabold text-xs px-3.5 py-1.5 rounded-full uppercase tracking-wider inline-block mb-3">
+                        Garantía de Comodidad
+                    </span>
+                    <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase tracking-tight">
+                        Equipamiento Completo Incluido
+                    </h2>
+                    <p class="text-slate-300 text-sm sm:text-base mt-3">
+                        En <strong>La Aldea Surf</strong> no tenés que preocuparte por conseguir tu propio equipo. Te proveemos todo para que entres seguro a surfear.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    
+                    <!-- CARD TRAJES -->
+                    <div class="bg-ocean-950/80 p-6 rounded-2xl border border-white/10 flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-ocean-500/20 text-ocean-400 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-white">Trajes de Neopreno</h3>
+                            <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                                Disponemos de trajes de neopreno limpios y en perfectas condiciones de todos los talles, para que te mantengas abrigado y cómodo durante la clase.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- CARD TABLAS -->
+                    <div class="bg-ocean-950/80 p-6 rounded-2xl border border-white/10 flex items-start space-x-4">
+                        <div class="w-14 h-14 bg-emerald-500/20 text-emerald-400 rounded-2xl flex items-center justify-center text-2xl shrink-0">
+                            <i class="fa-solid fa-water"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl text-white">Tablas de Surf Apta Nivel</h3>
+                            <p class="text-sm text-slate-400 mt-1 leading-relaxed">
+                                Tablas softboard (con cubierta blanda e ideales para principiantes) e intermedias evolutivas que aseguran estabilidad y rápida flotación.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BANDERIN INFORMATIVO -->
+                <div class="mt-8 text-center pt-6 border-t border-white/10">
+                    <p class="text-xs sm:text-sm text-slate-300">
+                        <i class="fa-solid fa-circle-info text-ocean-400 mr-2"></i>
+                        <strong>¿Qué necesitas traer?</strong> Solo tu traje de baño, toalla, protector solar y ¡muchas ganas de surfear!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CLASES -->
+    <section id="clases" class="py-20 bg-ocean-900 border-t border-white/10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-400 font-display font-extrabold uppercase tracking-widest text-xs">
+                    Aprendé o perfeccionate
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase mt-2 mb-3">
+                    Nuestras Clases
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Para todas las edades a partir de los 6 años.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-ocean-950 p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Principiantes</h3>
+                        <p class="text-slate-400 text-xs mb-6">Tu primera experiencia en las olas con total seguridad.</p>
+                        <ul class="space-y-3 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Teoría en arena y seguridad</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Remada y puesta de pie</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span class="font-bold text-emerald-400">Traje y Tabla Incluidos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20consultar%20por%20clase%20para%20Principiante" target="_blank" class="w-full text-center bg-ocean-800 hover:bg-ocean-700 text-white font-display font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition-colors">
+                        Consultar Clase
+                    </a>
+                </div>
+
+                <div class="bg-ocean-950 p-8 rounded-2xl border-2 border-emerald-500 relative flex flex-col justify-between">
+                    <div class="absolute -top-3 right-6 bg-emerald-500 text-ocean-950 text-[10px] font-display font-extrabold uppercase px-3 py-1 rounded-full">
+                        Más Solicitado
+                    </div>
+                    <div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Intermedios</h3>
+                        <p class="text-slate-400 text-xs mb-6">Mejorá tu lectura de ola y maniobras.</p>
+                        <ul class="space-y-3 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Ubicación en el pico</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Correr la pared de la ola</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span class="font-bold text-emerald-400">Traje y Tabla Incluidos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20consultar%20por%20clases%20de%20Nivel%20Intermedio" target="_blank" class="w-full text-center bg-emerald-500 hover:bg-emerald-400 text-ocean-950 font-display font-extrabold py-3 rounded-xl text-xs uppercase tracking-wider transition-colors">
+                        Reservar Mi Clase
+                    </a>
+                </div>
+
+                <div class="bg-ocean-950 p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display font-extrabold text-2xl text-white mb-2">Clase Particular</h3>
+                        <p class="text-slate-400 text-xs mb-6">Atención 1 a 1 exclusiva con el instructor.</p>
+                        <ul class="space-y-3 text-xs text-slate-300 mb-8">
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Avance a tu propio ritmo</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span>Horario según mejor marea</span>
+                            </li>
+                            <li class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check text-emerald-400"></i>
+                                <span class="font-bold text-emerald-400">Equipamiento Completo Incluido</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20consultar%20por%20Clases%20Particulares" target="_blank" class="w-full text-center bg-ocean-800 hover:bg-ocean-700 text-white font-display font-bold py-3 rounded-xl text-xs uppercase tracking-wider transition-colors">
+                        Consultar Particular
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER MINIMALISTA -->
+    <footer class="bg-ocean-950 border-t border-white/10 py-10">
+        <div class="max-w-6xl mx-auto px-4 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div>
+                <span class="font-display font-extrabold text-2xl text-white block tracking-wider">LA ALDEA SURF</span>
+                <span class="text-xs text-slate-400">Mar de Ajó &bull; Partido de La Costa &bull; Temporada 2027</span>
+            </div>
+            <div class="text-xs text-slate-500">
+                &copy; La Aldea Surf - Escuela de Surf.
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE PERSISTENTE DE WHATSAPP -->
+    <a href="https://wa.me/5492257525899?text=Hola!%20Quiero%20consultar%20por%20clases%20de%20surf" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 z-50 bg-emerald-500 text-ocean-950 p-4 rounded-full shadow-2xl flex items-center justify-center pulse-whatsapp transition-transform hover:scale-110"
+       aria-label="Contactar por WhatsApp">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- SCRIPT DE CARGA DE CLIMA Y MAR EN VIVO -->
+    <script>
+        async function fetchMarDeAjoWeather() {
+            try {
+                // Coordenadas Mar de Ajó: -36.7126, -56.6783
+                const weatherRes = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-36.7126&longitude=-56.6783&current_weather=true');
+                const weatherData = await weatherRes.json();
+
+                if (weatherData.current_weather) {
+                    const temp = Math.round(weatherData.current_weather.temperature);
+                    const wind = Math.round(weatherData.current_weather.windspeed);
+                    document.getElementById('live-temp').textContent = temp + '°C';
+                    document.getElementById('live-wind').textContent = wind + ' km/h';
+                    document.getElementById('wind-dir').textContent = 'Dirección ' + weatherData.current_weather.winddirection + '°';
+                }
+
+                // API Marina para Olas
+                const marineRes = await fetch('https://marine-api.open-meteo.com/v1/marine?latitude=-36.7126&longitude=-56.6783&hourly=wave_height,wave_period&timezone=auto');
+                const marineData = await marineRes.json();
+
+                if (marineData.hourly && marineData.hourly.wave_height) {
+                    const hour = new Date().getHours();
+                    const waveHeight = marineData.hourly.wave_height[hour] || 1.1;
+                    const wavePeriod = marineData.hourly.wave_period[hour] || 8;
+                    document.getElementById('live-wave').textContent = waveHeight.toFixed(1) + ' m';
+                    document.getElementById('live-period').textContent = Math.round(wavePeriod) + ' seg';
+                }
+            } catch (err) {
+                document.getElementById('live-temp').textContent = '22°C';
+                document.getElementById('live-wind').textContent = '14 km/h';
+                document.getElementById('live-wave').textContent = '1.2 m';
+                document.getElementById('live-period').textContent = '8 seg';
+                document.getElementById('wind-dir').textContent = 'Viento Costero';
+            }
+        }
+
+        fetchMarDeAjoWeather();
+    </script>
 </body>
 </html>
+```
