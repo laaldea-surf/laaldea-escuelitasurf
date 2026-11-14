@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- Íconos FontAwesome incluidos en la página (SVG) -->
     
     <script>
         tailwind.config = {
@@ -82,10 +81,10 @@
             <!-- NAV DESKTOP -->
             <nav class="hidden md:flex items-center space-x-8 text-xs font-extrabold tracking-widest">
                 <a href="#inicio" class="text-slate-300 hover:text-white transition-colors">INICIO</a>
-                <a href="#clima" class="text-slate-300 hover:text-white transition-colors">CLIMA & MAREAS</a>
                 <a href="#incluido" class="text-slate-300 hover:text-white transition-colors">EQUIPAMIENTO</a>
                 <a href="#clases" class="text-slate-300 hover:text-white transition-colors">CLASES</a>
                 <a href="#muestras" class="text-slate-300 hover:text-white transition-colors">MUESTRAS</a>
+                <a href="#clima" class="text-slate-300 hover:text-white transition-colors">CLIMA & MAREAS</a>
             </nav>
 
             <!-- CTA WHATSAPP TOP -->
@@ -133,14 +132,13 @@
                 TEMPORADA 2027
             </p>
 
-            <!-- DESTACADO: EQUIPAMIENTO 100% INCLUIDO -->
-            <div class="max-w-xl mx-auto bg-ocean-900/90 border border-ocean-500/40 backdrop-blur-md p-4 sm:p-5 rounded-2xl mb-10 shadow-2xl">
-                <div class="flex items-center justify-center space-x-3 text-emerald-400 font-extrabold text-sm sm:text-base">
-                    <svg class="fa-i text-xl shrink-0" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M256 512a256 256 0 1 1 0-512 256 256 0 1 1 0 512m118-366.3c-10.7-7.8-25.7-5.4-33.5 5.3L221.1 315.2 169 263.1c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l72 72c5 5 11.8 7.5 18.8 7s13.4-4.1 17.5-9.8l135.9-187c7.8-10.7 5.4-25.7-5.3-33.5"/></svg>
-                    <span>Trajes de neopreno y tablas 100% incluidos en cada clase</span>
-                </div>
-                <p class="text-slate-300 text-xs sm:text-sm mt-1.5 font-normal">
-                    Llegás a la playa y tenés todo listo para entrar al agua. Sin costos extras.
+            <!-- NUEVO DESTACADO SOLICITADO -->
+            <div class="max-w-xl mx-auto bg-ocean-900/90 border border-ocean-500/40 backdrop-blur-md p-5 sm:p-6 rounded-2xl mb-10 shadow-2xl">
+                <h3 class="font-display font-extrabold text-xl sm:text-2xl text-white tracking-wide uppercase mb-2">
+                    “El mejor surfista es el que más se divierte”
+                </h3>
+                <p class="text-emerald-400 text-sm sm:text-base font-medium">
+                    Vení a disfrutar de esta increíble experiencia.
                 </p>
             </div>
 
@@ -154,12 +152,6 @@
                     <span class="uppercase tracking-wider">Escribime por WhatsApp</span>
                 </a>
 
-                <a href="#clima" 
-                   class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-ocean-800/80 hover:bg-ocean-700 text-white font-bold text-base px-6 py-4 rounded-xl border border-white/10 backdrop-blur-md transition-all">
-                    <svg class="fa-i text-ocean-400" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M410.6 124.1c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 99.7 36.7 108.9 20.8 111 7.7 112.8-1.6 124.8.2 138s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m0 144c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 243.7 36.7 252.9 20.8 255 7.7 256.7-1.6 268.8.2 282s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m-71.2 144c21.3-16.1 49.9-16.1 71.2 0 20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 387.7 36.7 396.9 20.8 399 7.7 400.8-1.6 412.8.2 426s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9"/></svg>
-                    <span>Ver Clima y Mareas Hoy</span>
-                </a>
-
                 <a href="https://www.instagram.com/escueladesurflaaldea"
                    target="_blank"
                    rel="noopener noreferrer"
@@ -167,107 +159,6 @@
                     <svg class="fa-i text-ocean-400" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M224.3 141a115 115 0 1 0-.6 230 115 115 0 1 0 .6-230m-.6 40.4a74.6 74.6 0 1 1 .6 149.2 74.6 74.6 0 1 1-.6-149.2m93.4-45.1a26.8 26.8 0 1 1 53.6 0 26.8 26.8 0 1 1-53.6 0m129.7 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8M399 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1"/></svg>
                     <span>Seguinos en Instagram</span>
                 </a>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- SECCIÓN CLIMA, OLAS Y MAREAS EN VIVO EN MAR DE AJÓ -->
-    <section id="clima" class="py-20 bg-ocean-900 border-y border-white/10 relative">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-ocean-400 font-display font-extrabold uppercase tracking-widest text-xs">
-                    Información Técnica en Tiempo Real
-                </span>
-                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase mt-2 mb-3">
-                    Clima & Estado del Mar
-                </h2>
-                <p class="text-slate-400 text-sm sm:text-base">
-                    Condiciones actuales en el pico de <strong>Mar de Ajó</strong> (Coordenadas: -36.71, -56.67).
-                </p>
-            </div>
-
-            <!-- WIDGET DE CLIMA Y MAR EN VIVO -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8">
-                
-                <!-- TEMPERATURA -->
-                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
-                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
-                        <svg class="fa-i" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M160 0c-53 0-96 43-96 96v164.7C34.5 287 16 325.4 16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-42.6-18.5-81-48-107.3V96c0-53-43-96-96-96m64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3V216c0-13.3 10.7-24 24-24s24 10.7 24 24v92.7c23.5 9.5 40 32.5 40 59.3"/></svg>
-                    </div>
-                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Temperatura</span>
-                    <span id="live-temp" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">--°C</span>
-                    <span class="text-[11px] text-ocean-400 mt-1" id="temp-desc">Mar de Ajó</span>
-                </div>
-
-                <!-- VIENTO -->
-                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
-                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
-                        <svg class="fa-i" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M288 32c0 17.7 14.3 32 32 32h40c13.3 0 24 10.7 24 24s-10.7 24-24 24H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h328c48.6 0 88-39.4 88-88S408.6 0 360 0h-40c-17.7 0-32 14.3-32 32m64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32c-17.7 0-32 14.3-32 32M128 512h40c48.6 0 88-39.4 88-88s-39.4-88-88-88H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h136c13.3 0 24 10.7 24 24s-10.7 24-24 24h-40c-17.7 0-32 14.3-32 32s14.3 32 32 32"/></svg>
-                    </div>
-                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Viento</span>
-                    <span id="live-wind" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- km/h</span>
-                    <span class="text-[11px] text-emerald-400 mt-1" id="wind-dir">Cargando...</span>
-                </div>
-
-                <!-- ALTURA DE OLA -->
-                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
-                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
-                        <svg class="fa-i" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M410.6 124.1c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 99.7 36.7 108.9 20.8 111 7.7 112.8-1.6 124.8.2 138s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m0 144c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 243.7 36.7 252.9 20.8 255 7.7 256.7-1.6 268.8.2 282s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m-71.2 144c21.3-16.1 49.9-16.1 71.2 0 20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 387.7 36.7 396.9 20.8 399 7.7 400.8-1.6 412.8.2 426s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9"/></svg>
-                    </div>
-                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Altura de Ola</span>
-                    <span id="live-wave" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- m</span>
-                    <span class="text-[11px] text-ocean-400 mt-1">Oleaje Costero</span>
-                </div>
-
-                <!-- PERIODO DE OLAS -->
-                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
-                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
-                        <svg class="fa-i" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M168.5 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h32v25.3C92.5 85.2 8.5 176.8 8.5 288c0 119.3 96.7 216 216 216s216-96.7 216-216c0-39.8-10.8-77.1-29.6-109.2l28.2-28.2c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-23.4 23.4c-32.9-30.2-75.2-50.3-122-55.5V47.9h32c13.3 0 24-10.7 24-24s-10.7-24-24-24h-112zm80 184v104c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24"/></svg>
-                    </div>
-                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Período</span>
-                    <span id="live-period" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- seg</span>
-                    <span class="text-[11px] text-emerald-400 mt-1">Swell marítimo</span>
-                </div>
-
-            </div>
-
-            <!-- TABLA DE MAREAS ESTIMADAS DEL DÍA -->
-            <div class="bg-ocean-950/90 border border-white/10 rounded-2xl p-6 shadow-xl">
-                <div class="flex items-center space-x-3 mb-4 border-b border-white/10 pb-4">
-                    <svg class="fa-i text-ocean-400 text-xl" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="m99.3 256.1 69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2 0-53 43-96 96-96s96 43 96 96c0 14.3-3.1 27.9-8.8 40.2l44.4 76.7c-23.1 26-53.7 45.1-88.4 53.8L256 191.9l-68.1 117.6c21.5 6.8 44.3 10.5 68.1 10.5 70.7 0 133.8-32.7 174.9-84 11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.2 341.8 347 384 256.1 384c-35.4 0-69.4-6.4-100.7-18.1l-56.7 97.8c-4.7 8.1-11.7 14.7-20.1 18.9l-55.4 27.7c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496v-55.4c0-8.4 2.2-16.7 6.5-24.1l60-103.7c-12.8-11.2-24.6-23.5-35.3-36.8-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1zm281.8 151.8c32.5-13 62.4-31 88.9-52.9l35.6 61.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6.7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
-                    <div>
-                        <h3 class="font-display font-extrabold text-white text-base">Tabla de Mareas Estimadas del Día</h3>
-                        <p class="text-xs text-slate-400">Referencia de mareas para la zona de Mar de Ajó</p>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
-                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Pleamar (Alta)</span>
-                        <span class="font-display font-bold text-lg text-white">04:15 hs</span>
-                        <span class="text-xs text-ocean-400 block">+1.45 m</span>
-                    </div>
-
-                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
-                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Bajamar (Baja)</span>
-                        <span class="font-display font-bold text-lg text-white">10:30 hs</span>
-                        <span class="text-xs text-emerald-400 block">+0.42 m</span>
-                    </div>
-
-                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
-                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Pleamar (Alta)</span>
-                        <span class="font-display font-bold text-lg text-white">16:45 hs</span>
-                        <span class="text-xs text-ocean-400 block">+1.52 m</span>
-                    </div>
-
-                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
-                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Bajamar (Baja)</span>
-                        <span class="font-display font-bold text-lg text-white">22:50 hs</span>
-                        <span class="text-xs text-emerald-400 block">+0.38 m</span>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -443,7 +334,6 @@
                 </p>
             </div>
 
-            <!-- Para sumar más videos: copiá un bloque <figure> y cambiá el src y el poster -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
 
                 <figure class="mx-auto w-full max-w-[320px] bg-ocean-900 border border-white/10 rounded-3xl p-2 shadow-2xl">
@@ -472,6 +362,107 @@
                 </div>
 
             </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CLIMA, OLAS Y MAREAS EN VIVO EN MAR DE AJÓ (UBICADA ABAJO) -->
+    <section id="clima" class="py-20 bg-ocean-900 border-t border-white/10 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-ocean-400 font-display font-extrabold uppercase tracking-widest text-xs">
+                    Información Técnica en Tiempo Real
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white uppercase mt-2 mb-3">
+                    Clima & Estado del Mar
+                </h2>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    Condiciones actuales en el pico de <strong>Mar de Ajó</strong> (Coordenadas: -36.71, -56.67).
+                </p>
+            </div>
+
+            <!-- WIDGET DE CLIMA Y MAR EN VIVO -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mb-8">
+                
+                <!-- TEMPERATURA -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <svg class="fa-i" viewBox="0 0 320 512" aria-hidden="true" focusable="false"><path d="M160 0c-53 0-96 43-96 96v164.7C34.5 287 16 325.4 16 368c0 79.5 64.5 144 144 144s144-64.5 144-144c0-42.6-18.5-81-48-107.3V96c0-53-43-96-96-96m64 368c0 35.3-28.7 64-64 64s-64-28.7-64-64c0-26.9 16.5-49.9 40-59.3V216c0-13.3 10.7-24 24-24s24 10.7 24 24v92.7c23.5 9.5 40 32.5 40 59.3"/></svg>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Temperatura</span>
+                    <span id="live-temp" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">--°C</span>
+                    <span class="text-[11px] text-ocean-400 mt-1" id="temp-desc">Mar de Ajó</span>
+                </div>
+
+                <!-- VIENTO -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <svg class="fa-i" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M288 32c0 17.7 14.3 32 32 32h40c13.3 0 24 10.7 24 24s-10.7 24-24 24H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h328c48.6 0 88-39.4 88-88S408.6 0 360 0h-40c-17.7 0-32 14.3-32 32m64 352c0 17.7 14.3 32 32 32h32c53 0 96-43 96-96s-43-96-96-96H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h384c17.7 0 32 14.3 32 32s-14.3 32-32 32h-32c-17.7 0-32 14.3-32 32M128 512h40c48.6 0 88-39.4 88-88s-39.4-88-88-88H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h136c13.3 0 24 10.7 24 24s-10.7 24-24 24h-40c-17.7 0-32 14.3-32 32s14.3 32 32 32"/></svg>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Viento</span>
+                    <span id="live-wind" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- km/h</span>
+                    <span class="text-[11px] text-emerald-400 mt-1" id="wind-dir">Cargando...</span>
+                </div>
+
+                <!-- ALTURA DE OLA -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <svg class="fa-i" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="M410.6 124.1c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 99.7 36.7 108.9 20.8 111 7.7 112.8-1.6 124.8.2 138s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m0 144c20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 243.7 36.7 252.9 20.8 255 7.7 256.7-1.6 268.8.2 282s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9c21.3-16.1 49.9-16.1 71.2 0m-71.2 144c21.3-16.1 49.9-16.1 71.2 0 20.7 15.6 46 30.7 74.2 34.5 13.1 1.8 25.2-7.5 27-20.6s-7.5-25.2-20.6-27c-15.9-2.1-33.2-11.3-51.7-25.2-38.4-29-90.5-29-129 0-24 18.1-40.7 26.3-54.5 26.3s-30.5-8.2-54.5-26.3c-38.4-29-90.5-29-129 0C54 387.7 36.7 396.9 20.8 399 7.7 400.8-1.6 412.8.2 426s13.8 22.4 27 20.6c28.2-3.8 53.6-18.9 74.2-34.5 21.3-16.1 49.9-16.1 71.2 0 24.2 18.3 52.3 35.9 83.4 35.9s59.1-17.7 83.4-35.9"/></svg>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Altura de Ola</span>
+                    <span id="live-wave" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- m</span>
+                    <span class="text-[11px] text-ocean-400 mt-1">Oleaje Costero</span>
+                </div>
+
+                <!-- PERIODO DE OLAS -->
+                <div class="bg-ocean-950/80 border border-white/10 rounded-2xl p-5 text-center flex flex-col items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 bg-ocean-500/20 text-ocean-400 rounded-xl flex items-center justify-center text-2xl mb-3">
+                        <svg class="fa-i" viewBox="0 0 448 512" aria-hidden="true" focusable="false"><path d="M168.5 0c-13.3 0-24 10.7-24 24s10.7 24 24 24h32v25.3C92.5 85.2 8.5 176.8 8.5 288c0 119.3 96.7 216 216 216s216-96.7 216-216c0-39.8-10.8-77.1-29.6-109.2l28.2-28.2c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-23.4 23.4c-32.9-30.2-75.2-50.3-122-55.5V47.9h32c13.3 0 24-10.7 24-24s-10.7-24-24-24h-112zm80 184v104c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24"/></svg>
+                    </div>
+                    <span class="text-xs text-slate-400 font-bold uppercase tracking-wider">Período</span>
+                    <span id="live-period" class="font-display font-extrabold text-2xl sm:text-3xl text-white mt-1">-- seg</span>
+                    <span class="text-[11px] text-emerald-400 mt-1">Swell marítimo</span>
+                </div>
+
+            </div>
+
+            <!-- TABLA DE MAREAS ESTIMADAS DEL DÍA -->
+            <div class="bg-ocean-950/90 border border-white/10 rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center space-x-3 mb-4 border-b border-white/10 pb-4">
+                    <svg class="fa-i text-ocean-400 text-xl" viewBox="0 0 512 512" aria-hidden="true" focusable="false"><path d="m99.3 256.1 69.4-119.9c-5.6-12.2-8.8-25.8-8.8-40.2 0-53 43-96 96-96s96 43 96 96c0 14.3-3.1 27.9-8.8 40.2l44.4 76.7c-23.1 26-53.7 45.1-88.4 53.8L256 191.9l-68.1 117.6c21.5 6.8 44.3 10.5 68.1 10.5 70.7 0 133.8-32.7 174.9-84 11.1-13.8 31.2-16 45-5s16 31.2 5 45C428.2 341.8 347 384 256.1 384c-35.4 0-69.4-6.4-100.7-18.1l-56.7 97.8c-4.7 8.1-11.7 14.7-20.1 18.9l-55.4 27.7c-5 2.5-10.9 2.2-15.6-.7S0 501.5 0 496v-55.4c0-8.4 2.2-16.7 6.5-24.1l60-103.7c-12.8-11.2-24.6-23.5-35.3-36.8-11.1-13.8-8.8-33.9 5-45s33.9-8.8 45 5c5.7 7.1 11.8 13.8 18.2 20.1zm281.8 151.8c32.5-13 62.4-31 88.9-52.9l35.6 61.5c4.2 7.3 6.5 15.6 6.5 24.1V496c0 5.5-2.9 10.7-7.6 13.6s-10.6 3.2-15.6.7l-55.4-27.7c-8.4-4.2-15.4-10.8-20.1-18.9zM256 128a32 32 0 1 0 0-64 32 32 0 1 0 0 64"/></svg>
+                    <div>
+                        <h3 class="font-display font-extrabold text-white text-base">Tabla de Mareas Estimadas del Día</h3>
+                        <p class="text-xs text-slate-400">Referencia de mareas para la zona de Mar de Ajó</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Pleamar (Alta)</span>
+                        <span class="font-display font-bold text-lg text-white">04:15 hs</span>
+                        <span class="text-xs text-ocean-400 block">+1.45 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">1ª Bajamar (Baja)</span>
+                        <span class="font-display font-bold text-lg text-white">10:30 hs</span>
+                        <span class="text-xs text-emerald-400 block">+0.42 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Pleamar (Alta)</span>
+                        <span class="font-display font-bold text-lg text-white">16:45 hs</span>
+                        <span class="text-xs text-ocean-400 block">+1.52 m</span>
+                    </div>
+
+                    <div class="bg-ocean-900/60 p-3 rounded-xl border border-white/5">
+                        <span class="text-[11px] text-slate-400 block uppercase font-extrabold">2ª Bajamar (Baja)</span>
+                        <span class="font-display font-bold text-lg text-white">22:50 hs</span>
+                        <span class="text-xs text-emerald-400 block">+0.38 m</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
